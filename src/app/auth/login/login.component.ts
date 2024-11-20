@@ -13,9 +13,6 @@ import {
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
-
-
-
 export class LoginComponent {
   form = new FormGroup({
     email: new FormControl('', {
@@ -25,11 +22,6 @@ export class LoginComponent {
       validators: [Validators.required, Validators.minLength(6)],
     }),
   });
-
-
-
-
-
 
   get emailIsInvalid() {
     return (
@@ -46,7 +38,6 @@ export class LoginComponent {
       this.form.controls.password.invalid
     );
   }
-
 
   onSubmit() {
     // this.form.controls.email.addValidators
